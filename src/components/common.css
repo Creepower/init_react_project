@@ -7,13 +7,41 @@
   position: relative;
 }
 
+@media all and (max-width: 1000px){
+  .login_form {
+    min-height: 65%;
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    
+  }
+}
+
 .error_border {
   border: 1px solid #ca5b46;
 }
 
+.error_color {
+  color: #ca5b46
+}
+
+.error_text {
+  color:#ca5b46;
+  align-items: center;
+  font-size:1.5em;
+  background:rgb(172, 169, 169);
+  padding:0.5em;
+}
+
+
 .success_border {
   border: 1.5px solid #66b689;
 }
+
+.success_color {
+  color: #66b689;
+}
+
 
 /* header */
 .login_form h2 {
@@ -45,14 +73,11 @@
 .input i {
   position: absolute;
   font-size: 20px;
-  top: 39px;
+  top: 38px;
   right: 10px;
-  color: #ca5b46;
 }
 
-.email i {
-  color: #66b689;
-}
+
 
 .input label {
   font-size: 15px;
@@ -60,8 +85,8 @@
 
 .input span {
   font-size: 13px;
-  color: #ca5b46;
 }
+
 
 /* remember_me input */
 .remember_me {

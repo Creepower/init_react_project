@@ -51,7 +51,7 @@ export const Signup = () => {
             <div class="signup_link">
                 <span>Already have an account?</span>
 
-                <a href="#">Click here to signin</a>
+                <a href="/">Click here to signin</a>
             </div>
         </div>
     )

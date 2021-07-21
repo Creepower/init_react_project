@@ -15,6 +15,11 @@ export const Login = () => {
         message: ""
     })
 
+    //success variable
+    const [success, setSuccess] = useState({
+        type: ""
+    })
+
     
 
     // const [usernameError, setUsernameError] = useState("")
@@ -31,7 +36,7 @@ export const Login = () => {
             setError({
                 ...error,
                 type:"username",
-                message: "error username"
+                message: "Field required"
             })
             return
         }
@@ -39,7 +44,7 @@ export const Login = () => {
             setError({
                 ...error,
                 type: "password",
-                message: "error password"
+                message: "Field required"
             })
             return
         }
@@ -54,6 +59,7 @@ export const Login = () => {
 
 
 
+
         var userExists = false;
 
         for (const i in initialUsers) {
@@ -62,12 +68,18 @@ export const Login = () => {
 
                 if (initialUsers[i].username === username && initialUsers[i].password === password) {
 
-                    console.log("Login Success!")
+                    setSuccess ({
+                        ...success,
+                        type: "success"
+                    })
                     return
 
                 } else {
-                    console.log("Wrong password")
-                    return;
+                    setError({
+                        ...error,
+                        type: "password",
+                        message: "Incorrect password"
+                    })
                 }
 
                 // {}
@@ -76,7 +88,11 @@ export const Login = () => {
         }
 
         if (!userExists) {
-            console.log("user does not exist")
+            setError({
+                ...error,
+                type: "totalError",
+                message: "User doesn't exist"
+            })
             return;
         }
 
@@ -92,11 +108,15 @@ export const Login = () => {
                 <label>Username/email</label>
 
 
-                <input type="text" className={error.message !== "" ? error.type === "username" && "error_border" : ""} placeholder="Username" value={username} name="username" onChange={(e) => setUsername(e.target.value)} />
+                <input type="text" className={error.message !== "" ? error.type === "username" && "error_border" : success.type === "success" && "success_border"} placeholder="Username" value={username} name="username" onChange={(e) => setUsername(e.target.value)} />
                 {(error.message !== "" && error.type === "username") && < >
                     <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
                     <span className="error_color ">{error.message}</span>
                 </>}
+
+                {(success.type === "success" && < > 
+                    <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
+                </>)}
 
             </div>
 
@@ -104,12 +124,16 @@ export const Login = () => {
             <div className="input password">
                 <label >password</label>
 
-                <input type="password" className={error.message !== "" ? error.type === "password" && "error_border" : ""} placeholder="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <input type="password" className={error.message !== "" ? error.type === "password" && "error_border" : success.type === "success" && "success_border"} placeholder="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
                 {(error.message !== "" && error.type === "password") && < >
                     <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
                     <span className="error_color ">{error.message}</span>
                 </>}
+
+                {(success.type === "success" && < > 
+                    <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
+                </>)}
 
             </div>
 
@@ -119,6 +143,11 @@ export const Login = () => {
 
                 <span>&nbsp;Remember me</span>
             </div>
+
+            {(error.message !== "" && error.type === "totalError") && < >
+                <span className="input error_text">{error.message}</span> 
+            </>}      
+                       
 
             {/* <!-- button submit --> */}
             <div className="button">

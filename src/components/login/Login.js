@@ -6,8 +6,13 @@ import { initialUsers } from '../../assets/data/Data'
 export const Login = () => {
 
     // variables
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    /*const [signInValue,setSignInValue] =useState({
+        username:"",
+        password:""
+    })*/
+    
+    const [username,setUsername] =useState("")
+    const [password,setPassword]=useState("")
 
     // errors variable
     const [error, setError] = useState({
@@ -28,8 +33,8 @@ export const Login = () => {
 
     // functions
     const handleSubmit = () => {
-        //console.log("Username:", username);
-        //console.log("Password:", password);
+        console.log("Username:", username);
+        console.log("Password:", password);
 
 
         if(username === ""){
@@ -91,7 +96,7 @@ export const Login = () => {
             setError({
                 ...error,
                 type: "totalError",
-                message: "User doesn't exist"
+                message: "User does not exist!"
             })
             return;
         }
@@ -147,8 +152,6 @@ export const Login = () => {
             {(error.message !== "" && error.type === "totalError") && < >
                 <span className="input error_text">{error.message}</span> 
             </>}      
-                       
-
             {/* <!-- button submit --> */}
             <div className="button">
                 <button onClick={handleSubmit}>Submit</button>
@@ -158,7 +161,7 @@ export const Login = () => {
             <div className="signup_link">
                 <span>Have no account?</span>
 
-                <a href="/">&nbsp; Click here to signup</a>
+                <a href="/signup">&nbsp; Click here to signup</a>
             </div>
         </div>
         // </div >

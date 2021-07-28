@@ -1,8 +1,8 @@
-import './Home.css';
-import img_1 from '../../../assets/images/img_1.png'
+import './Carousel.css';
+import img_1 from '../../assets/images/img_1.png'
 
 
-export const Home = () => {
+export const Carousel = () => {
     return(
         <section className="carousel container-fluid">
         <div className="row d-flex justify-content-center p-4">

@@ -17,7 +17,7 @@
 /* background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(IMAGE_URL); */
 
 .carousel_message{
-    background-image: linear-gradient(to bottom,rgb(225, 183, 191,0.8),rgb(225, 183, 191,0.9) ), url("../../../assets/images/img_2.jpg");
+    background-image: linear-gradient(to bottom,rgb(225, 183, 191,0.8),rgb(225, 183, 191,0.9) ), url("../../assets/images/img_2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;

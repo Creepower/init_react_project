@@ -98,11 +98,15 @@ export const Signup = () => {
             <div className="input username">
                 <label>username</label>
 
-                <input className={error.message !=="" ? error.type === "username" && "error_border": ""} type="text" placeholder="Username" value={username} name="username" onChange={(e)=> setUsername(e.target.value)}/>
+                <input className={error.message !=="" ? error.type === "username" && "error_border": success.type === "confirm" && "success_border"} type="text" placeholder="Username" value={username} name="username" onChange={(e)=> setUsername(e.target.value)}/>
 
                 {(error.message !== "" && error.type === "username") && < >
                     <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
                     <span className="error_color">{error.message}</span>
+                </>}
+
+                {success.type === "confirm" && < >
+                   <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
                 </>}
 
             </div>
@@ -111,11 +115,15 @@ export const Signup = () => {
             <div className="input email">
                 <label>email</label>
 
-                <input className={error.message !=="" ? error.type === "email" && "error_border": ""} type="email" placeholder="email@email.com" value={email} name="email" onChange={(e)=> setEmail(e.target.value)}/>
+                <input className={error.message !=="" ? error.type === "email" && "error_border": success.type === "confirm" && "success_border"} type="email" placeholder="email@email.com" value={email} name="email" onChange={(e)=> setEmail(e.target.value)}/>
 
                 {(error.message !== "" && error.type === "email") && < >
                     <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
                     <span className="error_color">{error.message}</span>
+                </>}
+
+                {success.type === "confirm" && < >
+                   <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
                 </>}
 
             </div>
@@ -125,11 +133,15 @@ export const Signup = () => {
 
                 <label>password</label>
 
-                <input className={error.message !=="" ? error.type === "password" && "error_border": ""} type="password" placeholder="password"value={password} name="passsword" onChange={(e)=> setPassword(e.target.value)}/>
+                <input className={error.message !=="" ? error.type === "password" && "error_border": success.type === "confirm" && "success_border"} type="password" placeholder="password"value={password} name="passsword" onChange={(e)=> setPassword(e.target.value)}/>
                 
                 {(error.message !== "" && error.type === "password") && < >
                     <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
                     <span className="error_color">{error.message}</span>
+                </>}
+
+                {success.type === "confirm" && < >
+                   <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
                 </>}
 
             </div>

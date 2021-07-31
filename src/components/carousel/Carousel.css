@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.carousel{
+    height: 90vh;
+    background-color: #E1B7BF;
+}
+
+.carousel_image img{
+     width:95%;
+    /* height:90%; */
+}
+/* background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(IMAGE_URL); */
+
+.carousel_message{
+    background-image: linear-gradient(to bottom,rgb(225, 183, 191,0.8),rgb(225, 183, 191,0.9) ), url("../../assets/images/img_2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel_message_line{
+    border: none;
+    width: 30%;
+    background: #44335d;
+    height: 10px;
+    margin-left: -110px;
+}
+
+.carousel_message_text h1, h2 {
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: bold;
+    color: #44335d;
+
+    text-transform: uppercase;
+}
+
+.carousel_message_text_list{
+    font-style: italic;
+    text-transform: lowercase;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 500;
+    /* color: rgb(77, 77, 77); */
+}
+
+.carousel_message button{
+    width: 50%;
+    border: none;
+    outline: none;
+    font-family: Montserrat;
+    font-size: 16;
+    text-transform: uppercase;
+    background-color: #44335d;
+    color: whitesmoke;
+    border-radius: 2px;
+}

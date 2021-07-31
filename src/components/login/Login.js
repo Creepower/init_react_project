@@ -6,8 +6,18 @@ import { initialUsers } from '../../assets/data/data'
 export const Login = () => {
 
     // variables
+<<<<<<< HEAD
     const [usernameField, setUsernameField] = useState("");
     const [passwordField, setPasswordField] = useState("");
+=======
+    /*const [signInValue,setSignInValue] =useState({
+        username:"",
+        password:""
+    })*/
+    
+    const [username,setUsername] =useState("")
+    const [password,setPassword]=useState("")
+>>>>>>> a24c087afd9f0f552600d371a072b86d6edaadd9
 
     // errors variable
     const [error, setError] = useState({
@@ -21,6 +31,11 @@ export const Login = () => {
 
     // functions
     const handleSubmit = () => {
+<<<<<<< HEAD
+=======
+        console.log("Username:", username);
+        console.log("Password:", password);
+>>>>>>> a24c087afd9f0f552600d371a072b86d6edaadd9
 
         var userExists = false;
 
@@ -66,8 +81,17 @@ export const Login = () => {
             }
         }
 
+<<<<<<< HEAD
         if (userExists === false) {
             console.log("user does not exist")
+=======
+        if (!userExists) {
+            setError({
+                ...error,
+                type: "totalError",
+                message: "User does not exist!"
+            })
+>>>>>>> a24c087afd9f0f552600d371a072b86d6edaadd9
             return;
         }
 
@@ -123,6 +147,12 @@ export const Login = () => {
                 <span>&nbsp;Remember me</span>
             </div>
 
+<<<<<<< HEAD
+=======
+            {(error.message !== "" && error.type === "totalError") && < >
+                <span className="input error_text">{error.message}</span> 
+            </>}      
+>>>>>>> a24c087afd9f0f552600d371a072b86d6edaadd9
             {/* <!-- button submit --> */}
             <div className="button">
                 <button onClick={handleSubmit}>Submit</button>
@@ -132,7 +162,7 @@ export const Login = () => {
             <div className="signup_link">
                 <span>Have no account?</span>
 
-                <a href="/">&nbsp; Click here to signup</a>
+                <a href="/signup">&nbsp; Click here to signup</a>
             </div>
         </div>
         //  {/* </div > */ }

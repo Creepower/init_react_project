@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
+<<<<<<< HEAD
 import '../common.css';
 // import { initialUsers } from '../../assets/data/data';
+=======
+import '../common.css'
+>>>>>>> a24c087afd9f0f552600d371a072b86d6edaadd9
 
 export const Signup = () => {
     const [signupValues, setSignupValues] = useState({
@@ -78,8 +82,96 @@ export const Signup = () => {
 
     }
 
+    // variables
+    const [username, setUsername] = useState("");
+    const [email,setEmail] = useState("");
+    const [password,setPassword] = useState("");
+    const [confirmation,confirmPassword] = useState("");
+
+    // error variables
+    const [error, setError] = useState({
+        type: "",
+        message: ""
+    })
+
+    //success variable
+    const [success, setSuccess] = useState({
+        type: ""
+    })
+ 
+
+    
+
+    const handleSubmit = () => {
+        console.log("Username:", username);
+        console.log("Email:", email);
+        console.log("Password:", password);
+        console.log("Confirm password:", confirmation)
+
+        if(username === ""){
+            setError({
+                ...error,
+                type:"username",
+                message: "Field required"
+            })
+            return
+        }
+        else if(email === ""){
+            setError({
+                ...error,
+                type: "email",
+                message: "Field required"
+            })
+            return
+        }
+        else if(password === ""){
+            setError({
+                ...error,
+                type: "password",
+                message: "Field required"
+            })
+            return
+        }
+        else if(confirmation === ""){
+            setError({
+                ...error,
+                type:"missing",
+                message: "Field required"
+            })
+            return
+        }
+        else{
+            setError({
+                ...error,
+                type:"",
+                message: ""
+            })
+        }
+
+
+
+       //password mismatch
+        if(password === confirmation){
+            setSuccess({
+                ...success,
+                type:"confirm"
+            })   
+        }
+        else{
+            setError({
+                ...error,
+                type:"confirm",
+                message:"Please confirm your password!"
+                
+            })
+        }
+                
+    }
+
+
     return (
         <div className="login_form">
+<<<<<<< HEAD
             <h2 className="header">Create-account</h2>
 
             {/* <!-- username input --> */}
@@ -105,10 +197,45 @@ export const Signup = () => {
                     <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
 
                     <span className="error_color">{error.message}</span>
+=======
+            <h2 className="header">Create account</h2>
+
+            {/*<!-- username input -->*/}
+            <div className="input username">
+                <label>username</label>
+
+                <input className={error.message !=="" ? error.type === "username" && "error_border": success.type === "confirm" && "success_border"} type="text" placeholder="Username" value={username} name="username" onChange={(e)=> setUsername(e.target.value)}/>
+
+                {(error.message !== "" && error.type === "username") && < >
+                    <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <span className="error_color">{error.message}</span>
+                </>}
+
+                {success.type === "confirm" && < >
+                   <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
                 </>}
 
             </div>
 
+            {/*<!-- email input -->*/}
+            <div className="input email">
+                <label>email</label>
+
+                <input className={error.message !=="" ? error.type === "email" && "error_border": success.type === "confirm" && "success_border"} type="email" placeholder="email@email.com" value={email} name="email" onChange={(e)=> setEmail(e.target.value)}/>
+
+                {(error.message !== "" && error.type === "email") && < >
+                    <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <span className="error_color">{error.message}</span>
+                </>}
+
+                {success.type === "confirm" && < >
+                   <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
+>>>>>>> a24c087afd9f0f552600d371a072b86d6edaadd9
+                </>}
+
+            </div>
+
+<<<<<<< HEAD
             {/* <!-- password input --> */}
             <div className="input password">
 
@@ -118,16 +245,55 @@ export const Signup = () => {
 
                 {(error.type === "password" && error.message !== "") && <>
                     <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
+=======
+            {/*<!-- password input -->*/}
+            <div className="input password">
+
+                <label>password</label>
+
+                <input className={error.message !=="" ? error.type === "password" && "error_border": success.type === "confirm" && "success_border"} type="password" placeholder="password"value={password} name="passsword" onChange={(e)=> setPassword(e.target.value)}/>
+                
+                {(error.message !== "" && error.type === "password") && < >
+                    <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <span className="error_color">{error.message}</span>
+                </>}
+
+                {success.type === "confirm" && < >
+                   <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
+                </>}
+>>>>>>> a24c087afd9f0f552600d371a072b86d6edaadd9
 
                     <span className="error_color">{error.message}</span>
                 </>}
             </div>
 
+<<<<<<< HEAD
             {/* <!-- confirm password input --> */}
             <div className="input password">
                 <label>confirm password</label>
 
                 <input type="password" className={error.message !== "" ? error.type === "confirmPassword" && "error_border" : ""} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="confirm password" />
+=======
+            {/*<!-- confirm password input -->*/}
+            <div className="input password">
+                <label>confirm password</label>
+
+                <input className={error.message !=="" ? error.type === "missing" && "error_border": success.type === "confirm" && "success_border"} type="password" placeholder="confirm password" value={confirmation} name="confirm password" onChange={(e)=> confirmPassword(e.target.value)}/>
+
+                {(error.message !=="" && error.type === "missing") && < >
+                    <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <span className="error_color">{error.message}</span>
+                </>}
+                {(error.message !=="" && error.type === "confirm") && < >
+                    <span className="input error_text">{error.message}</span> 
+                </>}
+
+
+                {success.type === "confirm" && < >
+                   <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
+                </>}
+
+>>>>>>> a24c087afd9f0f552600d371a072b86d6edaadd9
 
                 {(error.type === "confirmPassword" && error.message !== "") && <>
                     <i className="error_color fa fa-exclamation-circle" aria-hidden="true"></i>
@@ -136,6 +302,7 @@ export const Signup = () => {
                 </>}
             </div>
 
+<<<<<<< HEAD
             {/* general errors: */}
             {error.type === "error" && error.message !== "" ?
                 <div className="error">
@@ -148,11 +315,18 @@ export const Signup = () => {
                 </div>
             }
             {/* <!-- button submit --> */}
+=======
+            {/*<!-- button submit -->*/}
+>>>>>>> a24c087afd9f0f552600d371a072b86d6edaadd9
             <div className="button">
                 <button onClick={handleSubmit}>Submit</button>
             </div>
 
+<<<<<<< HEAD
             {/* <!-- signup link --> */}
+=======
+            {/*<!-- signup link -->*/}
+>>>>>>> a24c087afd9f0f552600d371a072b86d6edaadd9
             <div className="signup_link">
                 <span>Already have an account?</span>
 

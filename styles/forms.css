@@ -1,0 +1,96 @@
+.login_form {
+  background: #fff;
+  width: 35%;
+  min-height: 60%;
+  border-radius: 5px;
+  padding: 1em;
+  position: relative;
+}
+
+/* header */
+.login_form h2 {
+  text-align: center;
+  margin: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* input */
+/* email and password */
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 88%;
+  margin: 1em auto;
+  position: relative;
+}
+
+.input input {
+  height: 2.9em;
+  padding: 0 0.5em;
+  font-size: 15px;
+  border-radius: 4px;
+  margin: 3px 0;
+}
+
+.username input {
+  border: 1px solid #ca5b46;
+}
+
+.email input {
+  border: 1.5px solid #66b689;
+}
+
+.input i {
+  position: absolute;
+  font-size: 20px;
+  top: 39px;
+  right: 10px;
+  color: #ca5b46;
+}
+
+.email i {
+  color: #66b689;
+}
+
+.input label {
+  font-size: 15px;
+}
+
+.input span {
+  font-size: 13px;
+  color: #ca5b46;
+}
+
+/* remember_me input */
+.remember_me {
+  margin: 1.5em 34px;
+  font-size: 15px;
+}
+
+/* submit button */
+.button {
+  margin: 2em 0;
+  width: 100%;
+  display: flex;
+}
+
+.button button {
+  width: 88%;
+  margin: 0 auto 1.5em auto;
+  padding: 0.6em;
+  text-transform: uppercase;
+  font-size: 16px;
+  background-color: #6c3483;
+  color: white;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+/* sign up Link */
+.signup_link {
+  position: absolute;
+  margin: 0 34px;
+  bottom: 15px;
+  text-align: center;
+}

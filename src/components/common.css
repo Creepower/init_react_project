@@ -16,18 +16,11 @@
   color: #ca5b46 !important;
 }
 
-<<<<<<< HEAD
 .error {
   color: #ca5b46;
   font-size: 15px;
   width: 100%;
   text-align: center;
-=======
-.error_text {
-  color:#ca5b46;
-  align-items: center;
-  font-size:1.2em;
->>>>>>> a24c087afd9f0f552600d371a072b86d6edaadd9
 }
 /* success */
 .success_border {

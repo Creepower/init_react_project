@@ -8,14 +8,14 @@
 
 body {
   font-family: "Poppins";
-  background-color: #6c3483;
+  /* background-color: #6c3483; */
 }
 
 .main {
   height: 100vh;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 input {
   outline: none;

@@ -7,33 +7,22 @@
   position: relative;
 }
 
-@media all and (max-width: 1000px){
-  .login_form {
-    min-height: 65%;
-    display: flex;
-    flex-direction: column;
-    width: 88%;
-    
-  }
-}
-
+/* errors */
 .error_border {
   border: 1px solid #ca5b46;
 }
 
 .error_color {
-  color: #ca5b46
+  color: #ca5b46 !important;
 }
 
-.error_text {
-  color:#ca5b46;
-  align-items: center;
-  font-size:1.5em;
-  background:rgb(172, 169, 169);
-  padding:0.5em;
+.error {
+  color: #ca5b46;
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
 }
-
-
+/* success */
 .success_border {
   border: 1.5px solid #66b689;
 }
@@ -42,6 +31,12 @@
   color: #66b689;
 }
 
+.success {
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+  color: #66b689;
+}
 
 /* header */
 .login_form h2 {
@@ -69,15 +64,22 @@
   margin: 3px 0;
 }
 
+/* .username input {
+  border: 1px solid #ca5b46;
+} */
+
+/* .email input {
+} */
 
 .input i {
   position: absolute;
   font-size: 20px;
-  top: 38px;
+  top: 39px;
   right: 10px;
 }
 
-
+/* .email i {
+} */
 
 .input label {
   font-size: 15px;
@@ -85,8 +87,8 @@
 
 .input span {
   font-size: 13px;
+  /* color: #ca5b46; */
 }
-
 
 /* remember_me input */
 .remember_me {

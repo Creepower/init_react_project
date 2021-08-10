@@ -105,8 +105,8 @@ export const Login = () => {
 
 
     return (
-        <div className="login_form">
-            <h2 className="header">Login</h2>
+        <div className="login_form col-12 col-sm-10 col-md-8 col-lg-5">
+            <h2 className="header h2">Login</h2>
 
             {/* <!-- username input --> */}
             <div className="input username ">

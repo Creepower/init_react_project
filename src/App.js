@@ -1,28 +1,32 @@
-import { Route, Switch} from 'react-router-dom';
-import './App.css';
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { Home } from './pages/home/Home';
 import { Login } from './components/login/Login'
 import { Signup} from './components/signup/Signup'
-import { Carousel } from './components/carousel/Carousel'
+import { Navbar } from './components/navbar/Navbar';
 
 function App() {
 
 
   return (
-      <Switch>
-        <Route path="/" exact>
-          <Carousel/>
-        </Route>
-        <div className="main">
-          <Route path="/login">
-            <Login />
+    <BrowserRouter>
+       <div>
+        <Navbar className="" />
+
+        <Switch>
+          <Route path="/" exact>
+            <Home />
           </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-        </div>
-      </Switch>
-    
-   
+          <div className="main d-flex justify-content-center align-items-center"> 
+           <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/signup">
+              <Signup />
+            </Route>
+          </div> 
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 

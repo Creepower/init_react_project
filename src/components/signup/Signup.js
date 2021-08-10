@@ -91,8 +91,8 @@ export const Signup = () => {
 
 
     return (
-        <div className="login_form">
-            <h2 className="header">Create account</h2>
+        <div className="login_form col-12 col-sm-10 col-md-8 col-lg-5">
+            <h2 className="header h2">Create account</h2>
 
             {/*<!-- username input -->*/}
             <div className="input username">
@@ -177,7 +177,7 @@ export const Signup = () => {
             <div className="signup_link">
                 <span>Already have an account?</span>
 
-                <a href="/">Click here to signin</a>
+                <a href="/login">Click here to signin</a>
             </div>
         </div>
     )

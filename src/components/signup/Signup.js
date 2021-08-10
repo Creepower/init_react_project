@@ -108,6 +108,12 @@ export const Signup = () => {
                 {success.type === "confirm" && < >
                    <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
                 </>}
+                {success.type === "confirm" && < >
+                   <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
+                </>}
+                {success.type === "confirm" && < >
+                   <i className="success_color fa fa-check-circle-o" aria-hidden="true"></i>
+                </>}
 
             </div>
 

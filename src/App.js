@@ -3,6 +3,7 @@ import { Home } from './pages/home/Home';
 import { Login } from './components/login/Login'
 import { Signup} from './components/signup/Signup'
 import { Navbar } from './components/navbar/Navbar';
+import { Footer } from './components/footer/Footer'
 
 function App() {
 
@@ -25,6 +26,8 @@ function App() {
             </Route>
           </div> 
         </Switch>
+        
+        <Footer />
       </div>
     </BrowserRouter>
   );

@@ -1,7 +1,16 @@
-.footer{
-    position: relative;
+.footer-frame{
+    background-color: #2C3E50;
+}
+.input-field{
+    height: 30px;
+    margin-right:5px;
+}
+.butt{
+    height: 30px;
+    background-color:#E5E5E5;
 }
 
-footer{
-    position: absolute;
-}
+
+
+
+

@@ -1,0 +1,40 @@
+button {
+  border: none !important;
+  outline: none !important;
+}
+
+input {
+  outline: none !important;
+  border: none !important;
+}
+
+.footer {
+  /* position: absolute; */
+  bottom: 0;
+  background-color: #05101f;
+  /* border-radius: 5px 5px 0 0; */
+  color: #f7f7f7;
+}
+
+.footer .input button {
+  border-left: 1px solid#000;
+  cursor: pointer;
+}
+
+.footer .location {
+  height: 25px;
+}
+
+.footer .icons i {
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.footer .input button {
+  height: 2.4em;
+}
+
+.footer .input input {
+  height: 2.5em;
+  border-radius: 0;
+}

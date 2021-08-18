@@ -3,6 +3,14 @@
 .navbar {
   /* background-color: whitesmoke !important; */
   background-color: #45335d !important;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+.border-3 {
+  border-width: 2px !important;
+  border-radius: 2px;
 }
 
 .navbar_logo a {

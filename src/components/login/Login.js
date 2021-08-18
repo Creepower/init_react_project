@@ -88,7 +88,7 @@ export const Login = () => {
 
     return (
         // <div className="main">
-        <div className="login_form">
+        <div className="login_form " style={{ backgroundColor: "#c1c1c1" }}>
             <h2 className="header">Login</h2>
 
             {/* <!-- username input --> */}

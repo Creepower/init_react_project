@@ -79,7 +79,7 @@ export const Signup = () => {
     }
 
     return (
-        <div className="login_form">
+        <div className="login_form " style={{ background: "#c7c7c7" }}>
             <h2 className="header">Create-account</h2>
 
             {/* <!-- username input --> */}
